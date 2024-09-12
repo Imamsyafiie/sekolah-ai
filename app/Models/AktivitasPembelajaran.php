@@ -19,8 +19,12 @@ class AktivitasPembelajaran extends Model
     {
         return $this->belongsTo(KontenPembelajaran::class);
     }
-    public function nilai()
+    // public function nilai()
+    // {
+    //     return $this->hasMany(Nilai::class);
+    // }
+    public function interaksiPengguna()
     {
-        return $this->hasMany(Nilai::class);
+        return $this->hasMany(InteraksiPengguna::class);
     }
 }

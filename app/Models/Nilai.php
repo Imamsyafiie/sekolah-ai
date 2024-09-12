@@ -19,4 +19,8 @@ class Nilai extends Model
     {
         return $this->belongsTo(User::class, 'siswa_id');
     }
+    // public function interaksiPengguna()
+    // {
+    //     return $this->hasMany(InteraksiPengguna::class);
+    // }
 }

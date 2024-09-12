@@ -77,4 +77,9 @@ class User extends Authenticatable implements HasAvatar
     {
         return $this->hasMany(Nilai::class, 'siswa_id');
     }
+    // Relasi satu ke banyak (one to many) dengan Interaksi Pengguna
+    public function interaksiPengguna()
+    {
+        return $this->hasMany(InteraksiPengguna::class);
+    }
 }
