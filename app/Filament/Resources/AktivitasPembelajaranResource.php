@@ -99,6 +99,7 @@ class AktivitasPembelajaranResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
                 // ]),
             ])
+            ->defaultSort('created_at', 'desc')
             // ->contentGrid([
             //     'md' => 2,
             //     'xl' => 3,

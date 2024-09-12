@@ -31,7 +31,13 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->registration()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Teal,       // Warna primer yang menenangkan dan profesional
+                'secondary' => Color::Indigo,   // Warna sekunder yang elegan
+                'success' => Color::Emerald,    // Warna sukses yang cerah dan menyegarkan
+                'danger' => Color::Rose,        // Warna bahaya yang berani namun tetap stylish
+                'warning' => Color::Amber,      // Warna peringatan yang hangat dan menarik
+                'info' => Color::Sky,           // Warna info yang segar dan ringan
+                'dark' => Color::Slate,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -40,7 +46,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
+                // Widgets\AccountWidget::class,
                 // Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([

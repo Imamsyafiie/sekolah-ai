@@ -96,6 +96,7 @@ class UserResource extends Resource
                 // Tables\Columns\TextColumn::make('messenger_color')
                 //     ->searchable(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

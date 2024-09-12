@@ -49,19 +49,22 @@ class GuruResource extends Resource
                         ->circular(),
                     Tables\Columns\TextColumn::make('user.name')
                         ->description(fn($record): string => $record->user->roles->pluck('name')->implode(', '))
-                        // ->description(fn($record): string => $record->user->email)
+                        ->icon('heroicon-m-user-circle')
                         ->label('Nama Guru')
                         ->searchable()
                         ->sortable(),
                     Tables\Columns\TextColumn::make('user.email')
                         ->label('Email')
+                        ->icon('heroicon-m-envelope')
                         ->sortable(),
                     // Tables\Columns\TextColumn::make('user.roles.name')
                     //     ->label('Status')
                     //     ->searchable(),
-                    Tables\Columns\TextColumn::make('mata_pembelajaran'),
+                    Tables\Columns\TextColumn::make('mata_pembelajaran')
+                        ->icon('heroicon-m-book-open'),
                 ]),
             ])
+            ->defaultSort('created_at', 'desc')
             ->contentGrid([
                 'md' => 2,
                 'xl' => 3,

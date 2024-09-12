@@ -115,6 +115,7 @@ class KontenPembelajaranResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
 
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

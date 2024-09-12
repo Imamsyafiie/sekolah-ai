@@ -114,6 +114,7 @@ class InteraksiPenggunaResource extends Resource
                         ->dateTime(),
                 ]),
             ])
+            ->defaultSort('created_at', 'desc')
             ->contentGrid([
                 'md' => 2,
                 'xl' => 3,

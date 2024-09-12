@@ -49,17 +49,21 @@ class SiswaResource extends Resource
                     Tables\Columns\TextColumn::make('user.name')
                         ->description(fn($record): string => $record->user->roles->pluck('name')->implode(', '))
                         ->searchable()
+                        ->icon('heroicon-m-user-circle')
                         ->label('Nama Siswa')
                         ->sortable(),
                     Tables\Columns\TextColumn::make('user.email')
                         ->label('Email')
+                        ->icon('heroicon-m-envelope')
                         ->sortable(),
                     // Tables\Columns\TextColumn::make('user.roles.name')
                     //     ->label('Status')
                     //     ->searchable(),
-                    Tables\Columns\TextColumn::make('kelas'),
+                    Tables\Columns\TextColumn::make('kelas')
+                        ->icon('heroicon-m-building-library'),
                 ]),
             ])
+            ->defaultSort('created_at', 'desc')
             ->contentGrid([
                 'md' => 2,
                 'xl' => 3,
