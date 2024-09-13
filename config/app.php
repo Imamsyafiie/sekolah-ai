@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\ServiceProvider;
+
 return [
 
     /*
@@ -122,9 +125,13 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
-    // 'providers' => [
-    //     // ...
-    //     App\Providers\FilamentServiceProvider::class,
-    // ],
+    // 'providers' => ServiceProvider::defaultProviders()->merge(
+    //     [
+    //         App\Providers\AppServiceProvider::class,
+    //         Spatie\LaravelPackageTools\PackageServiceProvider::class,
+    //         // ...
+    //         // App\Providers\AuthServiceProvider::class,
+    //     ]
+    // )->toArray(),
 
 ];
