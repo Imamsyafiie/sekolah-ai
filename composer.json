@@ -9,14 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "bezhansalleh/filament-shield": "*",
+        "bezhansalleh/filament-shield": "^3.2",
         "filament/filament": "^3.2",
         "hugomyb/filament-media-action": "^3.1",
         "joaopaulolndev/filament-edit-profile": "^1.0",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "munafio/chatify": "^1.6",
-        "spatie/laravel-package-tools": "*"
+        "spatie/laravel-package-tools": "*",
+        "spatie/laravel-permission": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
