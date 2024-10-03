@@ -20,6 +20,8 @@ class InteraksiPenggunaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-eye';
     protected static ?string $navigationGroup = 'Menagement Guru & Siswa ';
+    protected static ?string $recordTitleAttribute = 'user.name';
+
 
     public static function form(Form $form): Form
     {

@@ -10,6 +10,7 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\Widgets;
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -18,7 +19,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
-
+use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -31,14 +32,17 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->registration()
             ->colors([
-                'primary' => Color::Teal,       // Warna primer yang menenangkan dan profesional
-                'secondary' => Color::Indigo,   // Warna sekunder yang elegan
-                'success' => Color::Emerald,    // Warna sukses yang cerah dan menyegarkan
-                'danger' => Color::Rose,        // Warna bahaya yang berani namun tetap stylish
-                'warning' => Color::Amber,      // Warna peringatan yang hangat dan menarik
-                'info' => Color::Sky,           // Warna info yang segar dan ringan
-                'dark' => Color::Slate,
+                'danger'  => '#e63946', // Red with a slight pink tone (vibrant danger)
+                'gray'    => '#6c757d', // Cool medium gray (neutral and balanced)
+                'info'    => '#00b4d8', // Bright sky blue (fresh and friendly)
+                'primary' => '#3f51b5', // Indigo blue (modern and professional)
+                'success' => '#2d6a4f', // Deep emerald green (rich success color)
+                'warning' => '#ffba08', // Bright amber yellow (strong and attention-grabbing)
             ])
+            ->brandName('Sekolah-AI')
+            ->sidebarCollapsibleOnDesktop()
+            // ->collapsedSidebarWidth('9rem')
+            // ->topNavigation()
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
@@ -65,6 +69,22 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+                FilamentShieldPlugin::make()
+                    ->gridColumns([
+                        'default' => 1,
+                        'sm' => 2,
+                        'lg' => 3
+                    ])
+                    ->sectionColumnSpan(1)
+                    ->checkboxListColumns([
+                        'default' => 1,
+                        'sm' => 2,
+                        'lg' => 2,
+                    ])
+                    ->resourceCheckboxListColumns([
+                        'default' => 1,
+                        'sm' => 2,
+                    ]),
                 FilamentEditProfilePlugin::make()
 
                     ->setTitle('My Profile')
@@ -80,7 +100,10 @@ class AdminPanelProvider extends PanelProvider
                         rules: 'mimes:jpeg,png|max:1024'
                     )
                     ->setIcon('heroicon-o-user')
-                    ->setSort(10)
+                    ->setSort(10),
+                FilamentFullcalendarPlugin::make()
+                    ->editable()
+                    ->selectable()
 
             ]);
     }

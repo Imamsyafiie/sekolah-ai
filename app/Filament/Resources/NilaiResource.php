@@ -14,6 +14,7 @@ use Closure;
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Columns\Layout\Stack;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -23,16 +24,16 @@ class NilaiResource extends Resource
 
     protected static ?string $navigationGroup = 'Menagement Pembelajaran';
     protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
+    protected static ?string $recordTitleAttribute = 'siswa.name';
+
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('aktivitas_pembelajaran_id')
-                    ->label('Pilih Judul')
-                    ->relationship('aktivitasPembelajaran.kontenpembelajaran', 'judul')
-                    ->required()
-                    ->preload(),
+                Forms\Components\TextInput::make('judul')
+                    ->label('Judul')
+                    ->required(),
 
                 Forms\Components\Select::make('siswa_id')
                     ->label('Nama Siswa')
@@ -53,13 +54,48 @@ class NilaiResource extends Resource
 
                 Forms\Components\Textarea::make('feedback')
                     ->label('Feedback')
+                    ->withAI()
                     ->required(fn($record) => $record !== null)
                     ->disabled(fn($record) => $record === null),
 
                 Forms\Components\FileUpload::make('file_tugas')
                     ->label('Upload Tugas')
                     ->directory('tugas_files')
+                    ->maxSize(50000)
                     ->nullable(),
+                Forms\Components\TextInput::make('text')
+                    ->label('Link YouTube')
+                    ->required()
+                    ->maxLength(300),
+                Forms\Components\Select::make('tema')
+                    ->label('Tema Proyek Nusantara')
+                    ->required()
+                    ->options([
+                        'Seni Budaya Nusantara' => 'Seni Budaya Nusantara',
+                        'Kuliner Khas Nusantara' => 'Kuliner Khas Nusantara',
+                        'Tokoh Lokal Nusantara' => 'Tokoh Lokal Nusantara',
+                        'Busana Tradisional Nusantara' => 'Busana Tradisional Nusantara',
+                    ])
+                    ->placeholder('Pilih tema proyek'),
+                Forms\Components\RichEditor::make('deskripsi')
+                    ->toolbarButtons([
+                        'attachFiles',
+                        'blockquote',
+                        'bold',
+                        'bulletList',
+                        'codeBlock',
+                        'h2',
+                        'h3',
+                        'italic',
+                        'link',
+                        'orderedList',
+                        'redo',
+                        'strike',
+                        'underline',
+                        'undo',
+                    ])
+                    ->label('Deskripsi')
+                    ->required(),
             ]);
     }
 
@@ -76,8 +112,8 @@ class NilaiResource extends Resource
                         ->icon('heroicon-m-user-circle')
                         ->sortable()
                         ->searchable(),
-                    Tables\Columns\TextColumn::make('aktivitasPembelajaran.kontenpembelajaran.judul')
-                        ->label('Judul')
+                    Tables\Columns\TextColumn::make('judul')
+                        ->label('Judul Project')
                         ->icon('heroicon-m-academic-cap')
                         ->sortable()
                         ->searchable(),
@@ -86,11 +122,15 @@ class NilaiResource extends Resource
                         ->icon('heroicon-m-clipboard-document-check')
                         ->sortable()
                         ->searchable(),
-
-                    // Tables\Columns\TextColumn::make('feedback')
-                    //     ->label('Feedback')
-                    //     ->icon('heroicon-m-clipboard-document-list')
-                    //     ->wrap(), // Membuat teks feedback agar ter-wrap jika terlalu panjang
+                    Tables\Columns\TextColumn::make('tema')
+                        ->label('Tema Proyek Nusantara')
+                        // ->icon('heroicon-m-clipboard-document-check')
+                        // ->sortable()
+                        ->searchable(),
+                    Tables\Columns\TextColumn::make('text')
+                        ->label('Link YouTube')
+                        ->formatStateUsing(fn($state) => '<a href="' . $state . '" target="_blank">' . $state . '</a>')
+                        ->html(), // Pastikan untuk mengizinkan HTML
                     Tables\Columns\TextColumn::make('file_tugas')
                         ->label('File Tugas')
                         ->url(fn($record) => $record->file_tugas ? Storage::url($record->file_tugas) : null)

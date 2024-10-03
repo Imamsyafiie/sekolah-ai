@@ -127,8 +127,9 @@ return [
     ],
     // 'providers' => ServiceProvider::defaultProviders()->merge(
     //     [
-    //         App\Providers\AppServiceProvider::class,
-    //         Spatie\LaravelPackageTools\PackageServiceProvider::class,
+    //         // App\Providers\AppServiceProvider::class,
+    //         // Spatie\LaravelPackageTools\PackageServiceProvider::class,
+    //         // Filament\AiAssistant\AiAssistantServiceProvider::class,
     //         // ...
     //         // App\Providers\AuthServiceProvider::class,
     //     ]

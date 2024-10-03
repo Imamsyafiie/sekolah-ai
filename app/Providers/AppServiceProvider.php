@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Filament\Auth\MyLogoutResponse;
+use Filament\Http\Responses\Auth\LogoutResponse;
 // use Illuminate\Support\Facades\Gate;
 
 class AppServiceProvider extends ServiceProvider
@@ -12,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(LogoutResponse::class, MyLogoutResponse::class);
     }
 
     /**

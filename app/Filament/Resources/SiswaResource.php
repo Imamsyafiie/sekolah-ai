@@ -20,6 +20,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Database\Eloquent\Model;
 
 class SiswaResource extends Resource
 {
@@ -28,6 +30,11 @@ class SiswaResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
     protected static ?string $navigationGroup = 'Menagement Guru & Siswa ';
     protected static ?string $navigationLabel = 'Data Siswa';
+    protected static ?string $recordTitleAttribute = 'user.name';
+    // public static function getGlobalSearchResultTitle(Model $record): string | Htmlable
+    // {
+    //     return $record->name;
+    // }
 
     public static function form(Form $form): Form
     {
@@ -36,7 +43,7 @@ class SiswaResource extends Resource
                 Forms\Components\Select::make('user_id')
                     ->relationship('user', 'name')
                     ->label('Nama Siswa')
-                    ->multiple()
+                    // ->multiple()
                     ->preload()
                     ->required(),
                 // ->disabled(), // Assuming you don't want to edit the user name directly here

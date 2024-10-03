@@ -22,15 +22,22 @@ class GuruResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
     protected static ?string $navigationGroup = 'Menagement Guru & Siswa ';
     protected static ?string $navigationLabel = 'Data Guru';
+    protected static ?string $recordTitleAttribute = 'user.name';
+
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\Select::make('user_id')
-                    ->relationship('user', 'name')
+                    // ->relationship('user', 'name')
                     ->label('Nama Guru')
-                    ->multiple()
+                    // ->multiple()
+                    ->relationship('user', 'name', function ($query) {
+                        $query->whereHas('roles', function ($q) {
+                            $q->where('name', 'guru'); // Asumsikan role name untuk siswa adalah 'siswa'
+                        });
+                    })
                     ->preload()
                     ->required(),
                 // ->disabled(), // Assuming you don't want to edit the user name directly here

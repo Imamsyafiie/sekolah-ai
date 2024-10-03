@@ -22,6 +22,8 @@ class AktivitasPembelajaranResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
     protected static ?string $navigationGroup = 'Menagement Pembelajaran';
+    protected static ?string $recordTitleAttribute = 'kontenpembelajaran.judul';
+
 
     public static function form(Form $form): Form
     {

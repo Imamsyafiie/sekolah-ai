@@ -19,49 +19,49 @@ class UserWidget extends BaseWidget
             Stat::make('Total Pengguna', User::count())
                 ->description('Jumlah total pengguna yang terdaftar')
                 ->descriptionIcon('heroicon-o-users') // Ikon pengguna
-                ->color('primary')
+                // ->color('primary')
                 ->chart([15, 25, 30, 45, 50]) // Chart mini untuk visualisasi data
-                ->chartColor('blue'),
+                ->color('success'),
 
             // Pengguna Aktif
             Stat::make('Pengguna Aktif', User::where('active_status', true)->count())
                 ->description('Pengguna yang aktif di chat saat ini')
                 // ->descriptionIcon('heroicon-o-status-online') // Ikon status aktif
-                ->color('success')
+                // ->color('success')
                 ->chart([10, 20, 30, 40, 45])
-                ->chartColor('green'),
+                ->color('info'),
 
             // Total Siswa
             Stat::make('Total Siswa', User::role('siswa')->count()) // 'siswa' adalah nama role
                 ->description('Jumlah total siswa yang terdaftar')
                 ->descriptionIcon('heroicon-o-academic-cap') // Ikon siswa
-                ->color('blue')
+                // ->color('blue')
                 ->chart([12, 18, 20, 35, 40])
-                ->chartColor('indigo'),
+                ->color('primary'),
 
             // Total Guru
             Stat::make('Total Guru', User::role('guru')->count()) // 'guru' adalah nama role
                 ->description('Jumlah total guru yang terdaftar')
                 ->descriptionIcon('heroicon-o-briefcase') // Ikon guru
-                ->color('amber')
+                // ->color('amber')
                 ->chart([8, 10, 12, 15, 20])
-                ->chartColor('yellow'),
+                ->color('danger'),
 
             // Total Materi Pembelajaran
             Stat::make('Total Materi Pembelajaran', KontenPembelajaran::count())
                 ->description('Total materi yang tersedia')
                 ->descriptionIcon('heroicon-o-book-open') // Ikon buku
-                ->color('purple')
+                // ->color('purple')
                 ->chart([5, 7, 10, 20, 25])
-                ->chartColor('purple'),
+                ->color('purple'),
 
             // Total Tugas Siswa
             Stat::make('Total Tugas Siswa', Nilai::count())
                 ->description('Jumlah tugas yang disetorkan oleh siswa')
                 ->descriptionIcon('heroicon-o-check-circle') // Ikon tugas
-                ->color('pink')
+                // ->color('pink')
                 ->chart([10, 15, 20, 25, 30])
-                ->chartColor('pink'),
+                ->color('gray'),
 
         ];
     }

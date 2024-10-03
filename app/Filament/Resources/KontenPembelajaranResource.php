@@ -26,6 +26,8 @@ class KontenPembelajaranResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-building-library';
     protected static ?string $navigationGroup = 'Menagement Pembelajaran';
+    protected static ?string $recordTitleAttribute = 'judul';
+
 
     public static function form(Form $form): Form
     {

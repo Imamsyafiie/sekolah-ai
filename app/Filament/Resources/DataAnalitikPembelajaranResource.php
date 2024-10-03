@@ -19,6 +19,8 @@ class DataAnalitikPembelajaranResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-arrow-trending-up';
     protected static ?string $navigationGroup = 'Menagement Pembelajaran';
+    protected static ?string $recordTitleAttribute = 'user.name';
+
 
     public static function form(Form $form): Form
     {
