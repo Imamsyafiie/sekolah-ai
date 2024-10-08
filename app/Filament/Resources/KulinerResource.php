@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use NaturalGroove\Filament\ImageGeneratorField\Forms\Components\ImageGenerator;
 
 class KulinerResource extends Resource
 {
@@ -19,13 +20,18 @@ class KulinerResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Menagement Kuliner';
+    protected static ?string $navigationLabel = 'Produk Nusantara';
+
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('image')
-                    ->image(),
+                // Forms\Components\FileUpload::make('image')
+                //     ->image(),
+                ImageGenerator::make('image')
+                    ->imageEditor()
+                    ->directory('blog'),
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),

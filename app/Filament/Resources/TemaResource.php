@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use NaturalGroove\Filament\ImageGeneratorField\Forms\Components\ImageGenerator;
 
 class TemaResource extends Resource
 {
@@ -32,10 +33,14 @@ class TemaResource extends Resource
                     ->label('Link YouTube')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('gambar')
+                ImageGenerator::make('gambar')
                     ->label('Gambar')
-                    ->required()
+                    ->imageEditor()
                     ->directory('tema'),
+                // Forms\Components\FileUpload::make('gambar')
+                //     ->label('Gambar')
+                //     ->required()
+                //     ->directory('tema'),
                 Forms\Components\RichEditor::make('text')
                     ->toolbarButtons([
                         'attachFiles',
@@ -54,6 +59,7 @@ class TemaResource extends Resource
                         'undo',
                     ])
                     ->label('Text')
+                    ->columnSpanFull()
                     ->required(),
             ]);
     }

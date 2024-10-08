@@ -1,6 +1,6 @@
   @extends('layout.app')
  @section('content')
-  <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset ('template/images/bg_2.jpg')}}');">
+  <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset ('template/images/7.webp')}}');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">

@@ -17,7 +17,7 @@
 				<div class="row">
           <div class="col-lg-8 ftco-animate">
             <h2 class="mb-3">{{ $kuliners->title }} Rp.{{ number_format($kuliners->price, 0, ',', '.') }}</h2>
-            <p>{!! strip_tags($kuliners->text) !!}</p>
+            <p>{!! ($kuliners->text) !!}</p>
              <!-- Menambahkan iframe YouTube di bawah deskripsi -->
     {{-- <div class="embed-responsive embed-responsive-16by9">
          <iframe class="w-100" height="315" src="https://www.youtube.com/embed/{{ $kuliners->nilai->text }}" 

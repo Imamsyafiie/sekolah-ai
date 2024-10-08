@@ -65,6 +65,7 @@ class UserWidget extends BaseWidget
 
         ];
     }
+
     // protected static function getGridColumns(): int
     // {
     //     return 3; // Mengatur tampilan menjadi 3 kolom

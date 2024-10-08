@@ -63,7 +63,7 @@ class KontenPembelajaranPolicy
      */
     public function forceDelete(User $user, KontenPembelajaran $kontenPembelajaran): bool
     {
-        return $user->can('force_delete_konten::pembelajaran');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class KontenPembelajaranPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_konten::pembelajaran');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
@@ -79,7 +79,7 @@ class KontenPembelajaranPolicy
      */
     public function restore(User $user, KontenPembelajaran $kontenPembelajaran): bool
     {
-        return $user->can('restore_konten::pembelajaran');
+        return $user->can('{{ Restore }}');
     }
 
     /**
@@ -87,7 +87,7 @@ class KontenPembelajaranPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_konten::pembelajaran');
+        return $user->can('{{ RestoreAny }}');
     }
 
     /**
@@ -95,7 +95,7 @@ class KontenPembelajaranPolicy
      */
     public function replicate(User $user, KontenPembelajaran $kontenPembelajaran): bool
     {
-        return $user->can('replicate_konten::pembelajaran');
+        return $user->can('{{ Replicate }}');
     }
 
     /**
@@ -103,6 +103,6 @@ class KontenPembelajaranPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_konten::pembelajaran');
+        return $user->can('{{ Reorder }}');
     }
 }

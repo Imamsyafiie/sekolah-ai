@@ -21,7 +21,7 @@ class AboutController extends Controller
         $totalAktivitas = AktivitasPembelajaran::count(); // Hitung total aktivitas pembelajaran
         // Mengambil semua data dari model SchoolProfile
         $tema = Tema::all();
-        $kearifan = kearifan::all();
+        // $kearifan = kearifan::all();
         // dd($tema);
 
         // $sections = [
@@ -33,6 +33,6 @@ class AboutController extends Controller
 
         // dd($sections);
         // Mengirim data ke view
-        return view('home.about', compact('kearifan', 'tema', 'totalUsers', 'totalRolesGuru', 'totalRolesSiswa', 'totalAktivitas'));
+        return view('home.about', compact('tema', 'totalUsers', 'totalRolesGuru', 'totalRolesSiswa', 'totalAktivitas'));
     }
 }

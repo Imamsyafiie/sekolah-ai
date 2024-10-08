@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3ab16d0b6ade98d50d546b51097e409",
+    "content-hash": "94536738e326520753cabe11ce74a164",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -2231,6 +2231,79 @@
             "time": "2024-08-21T07:31:27+00:00"
         },
         {
+            "name": "icetalker/filament-chatgpt-bot",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/icetalker/filament-chatgpt-bot.git",
+                "reference": "edd3089e0d7104ac47b0b373ae3dae22a243f4ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/icetalker/filament-chatgpt-bot/zipball/edd3089e0d7104ac47b0b373ae3dae22a243f4ea",
+                "reference": "edd3089e0d7104ac47b0b373ae3dae22a243f4ea",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.0|^10.0|^11.0",
+                "livewire/livewire": "^3.0",
+                "orhanerday/open-ai": "^4.7|^5.0",
+                "php": ">=7.4",
+                "spatie/laravel-package-tools": "^1.14.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.9|^8.1",
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.0",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Icetalker\\FilamentChatgptBot\\FilamentChatgptBotServiceProvider"
+                    ],
+                    "aliases": {
+                        "FilamentChatgptBot": "Icetalker\\FilamentChatgptBot\\Facades\\FilamentChatgptBot"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Icetalker\\FilamentChatgptBot\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Hwang",
+                    "email": "termlong.com@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integrate with OpenAI ChatGPT",
+            "homepage": "https://github.com/icetalker/filament-chatgpt-bot",
+            "keywords": [
+                "filament-chatgpt-bot",
+                "icetalker",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/icetalker/filament-chatgpt-bot/issues",
+                "source": "https://github.com/icetalker/filament-chatgpt-bot/tree/v1.1.0"
+            },
+            "time": "2024-04-04T03:16:27+00:00"
+        },
+        {
             "name": "jaybizzle/crawler-detect",
             "version": "v1.2.119",
             "source": {
@@ -2367,16 +2440,16 @@
         },
         {
             "name": "jiten14/jitone-ai",
-            "version": "v0.1.0",
+            "version": "v0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jiten14/jitone-ai.git",
-                "reference": "80c3e13007414a990dc0d814dd530cfcc4acadfd"
+                "reference": "a6d36589526878d30a7d616d1286a0cb66838767"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jiten14/jitone-ai/zipball/80c3e13007414a990dc0d814dd530cfcc4acadfd",
-                "reference": "80c3e13007414a990dc0d814dd530cfcc4acadfd",
+                "url": "https://api.github.com/repos/jiten14/jitone-ai/zipball/a6d36589526878d30a7d616d1286a0cb66838767",
+                "reference": "a6d36589526878d30a7d616d1286a0cb66838767",
                 "shasum": ""
             },
             "require": {
@@ -2439,7 +2512,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-09T19:43:22+00:00"
+            "time": "2024-09-26T14:47:32+00:00"
         },
         {
             "name": "joaopaulolndev/filament-edit-profile",
@@ -3979,6 +4052,84 @@
             "time": "2024-03-17T14:21:38+00:00"
         },
         {
+            "name": "naturalgroove/laravel-filament-image-generator-field",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/naturalGroove/laravel-filament-image-generator-field.git",
+                "reference": "63279a1706247b86be2de887f4056d5f84c4736c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/naturalGroove/laravel-filament-image-generator-field/zipball/63279a1706247b86be2de887f4056d5f84c4736c",
+                "reference": "63279a1706247b86be2de887f4056d5f84c4736c",
+                "shasum": ""
+            },
+            "require": {
+                "filament/forms": "^3.0",
+                "guzzlehttp/guzzle": "^7.8",
+                "openai-php/client": "^0.8.5",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.15.0",
+                "symfony/http-client": "^6.4"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.0.1",
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.9",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.1",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NaturalGroove\\Filament\\ImageGeneratorField\\FilamentImageGeneratorFieldServiceProvider"
+                    ],
+                    "aliases": {
+                        "FilamentImageGenerator": "NaturalGroove\\Filament\\ImageGeneratorField\\Facades\\ImageGeneratorField"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NaturalGroove\\Filament\\ImageGeneratorField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grzegorz Adamczyk",
+                    "email": "naturalgroove@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Filament plugin that generates images using AI directly in Admin Panel",
+            "homepage": "https://github.com/naturalgroove/laravel-filament-image-generator-field",
+            "keywords": [
+                "ai-image-generator",
+                "laravel",
+                "laravel-filament",
+                "laravel-filament-cms",
+                "laravel-filament-image-generator-field",
+                "laravel-filament-plugin",
+                "naturalGroove"
+            ],
+            "support": {
+                "issues": "https://github.com/naturalgroove/laravel-filament-image-generator-field/issues",
+                "source": "https://github.com/naturalgroove/laravel-filament-image-generator-field"
+            },
+            "time": "2024-05-08T21:08:46+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "3.8.0",
             "source": {
@@ -4651,6 +4802,65 @@
                 }
             ],
             "time": "2024-07-26T05:48:04+00:00"
+        },
+        {
+            "name": "orhanerday/open-ai",
+            "version": "5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orhanerday/open-ai.git",
+                "reference": "d8c78fe2f5fed59e0ba458f90b5589ed9f13a367"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orhanerday/open-ai/zipball/d8c78fe2f5fed59e0ba458f90b5589ed9f13a367",
+                "reference": "d8c78fe2f5fed59e0ba458f90b5589ed9f13a367",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "pestphp/pest": "^1.20",
+                "spatie/ray": "^1.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Orhanerday\\OpenAi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Orhan Erday",
+                    "email": "orhanerday@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OpenAI GPT-3 Api Client in PHP",
+            "homepage": "https://github.com/orhanerday/open-ai",
+            "keywords": [
+                "open-ai",
+                "orhanerday"
+            ],
+            "support": {
+                "issues": "https://github.com/orhanerday/open-ai/issues",
+                "source": "https://github.com/orhanerday/open-ai/tree/5.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/orhanerday",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-29T12:31:54+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7124,6 +7334,177 @@
                 }
             ],
             "time": "2024-05-31T14:55:39+00:00"
+        },
+        {
+            "name": "symfony/http-client",
+            "version": "v6.4.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client.git",
+                "reference": "fbebfcce21084d3e91ea987ae5bdd8c71ff0fd56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/fbebfcce21084d3e91ea987ae5bdd8c71ff0fd56",
+                "reference": "fbebfcce21084d3e91ea987ae5bdd8c71ff0fd56",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/log": "^1|^2|^3",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/http-client-contracts": "^3.4.1",
+                "symfony/service-contracts": "^2.5|^3"
+            },
+            "conflict": {
+                "php-http/discovery": "<1.15",
+                "symfony/http-foundation": "<6.3"
+            },
+            "provide": {
+                "php-http/async-client-implementation": "*",
+                "php-http/client-implementation": "*",
+                "psr/http-client-implementation": "1.0",
+                "symfony/http-client-implementation": "3.0"
+            },
+            "require-dev": {
+                "amphp/amp": "^2.5",
+                "amphp/http-client": "^4.2.1",
+                "amphp/http-tunnel": "^1.0",
+                "amphp/socket": "^1.1",
+                "guzzlehttp/promises": "^1.4|^2.0",
+                "nyholm/psr7": "^1.0",
+                "php-http/httplug": "^1.0|^2.0",
+                "psr/http-client": "^1.0",
+                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
+                "symfony/http-kernel": "^5.4|^6.0|^7.0",
+                "symfony/messenger": "^5.4|^6.0|^7.0",
+                "symfony/process": "^5.4|^6.0|^7.0",
+                "symfony/stopwatch": "^5.4|^6.0|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HttpClient\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides powerful methods to fetch HTTP resources synchronously or asynchronously",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "http"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/http-client/tree/v6.4.12"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-20T08:21:33+00:00"
+        },
+        {
+            "name": "symfony/http-client-contracts",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client-contracts.git",
+                "reference": "20414d96f391677bf80078aa55baece78b82647d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/20414d96f391677bf80078aa55baece78b82647d",
+                "reference": "20414d96f391677bf80078aa55baece78b82647d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\HttpClient\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Test/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to HTTP clients",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/http-client-contracts/tree/v3.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -11177,5 +11558,5 @@
         "php": "^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

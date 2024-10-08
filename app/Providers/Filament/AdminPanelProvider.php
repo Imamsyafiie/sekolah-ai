@@ -39,7 +39,7 @@ class AdminPanelProvider extends PanelProvider
                 'success' => '#2d6a4f', // Deep emerald green (rich success color)
                 'warning' => '#ffba08', // Bright amber yellow (strong and attention-grabbing)
             ])
-            ->brandName('Sekolah-AI')
+            ->brandName('Nusantara-AI')
             ->sidebarCollapsibleOnDesktop()
             // ->collapsedSidebarWidth('9rem')
             // ->topNavigation()

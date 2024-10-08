@@ -63,7 +63,7 @@ class AktivitasPembelajaranPolicy
      */
     public function forceDelete(User $user, AktivitasPembelajaran $aktivitasPembelajaran): bool
     {
-        return $user->can('force_delete_aktivitas::pembelajaran');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class AktivitasPembelajaranPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_aktivitas::pembelajaran');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
@@ -79,7 +79,7 @@ class AktivitasPembelajaranPolicy
      */
     public function restore(User $user, AktivitasPembelajaran $aktivitasPembelajaran): bool
     {
-        return $user->can('restore_aktivitas::pembelajaran');
+        return $user->can('{{ Restore }}');
     }
 
     /**
@@ -87,7 +87,7 @@ class AktivitasPembelajaranPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_aktivitas::pembelajaran');
+        return $user->can('{{ RestoreAny }}');
     }
 
     /**
@@ -95,7 +95,7 @@ class AktivitasPembelajaranPolicy
      */
     public function replicate(User $user, AktivitasPembelajaran $aktivitasPembelajaran): bool
     {
-        return $user->can('replicate_aktivitas::pembelajaran');
+        return $user->can('{{ Replicate }}');
     }
 
     /**
@@ -103,6 +103,6 @@ class AktivitasPembelajaranPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_aktivitas::pembelajaran');
+        return $user->can('{{ Reorder }}');
     }
 }

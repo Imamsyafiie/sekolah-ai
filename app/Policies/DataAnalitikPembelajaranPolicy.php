@@ -63,7 +63,7 @@ class DataAnalitikPembelajaranPolicy
      */
     public function forceDelete(User $user, DataAnalitikPembelajaran $dataAnalitikPembelajaran): bool
     {
-        return $user->can('force_delete_data::analitik::pembelajaran');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class DataAnalitikPembelajaranPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_data::analitik::pembelajaran');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
@@ -79,7 +79,7 @@ class DataAnalitikPembelajaranPolicy
      */
     public function restore(User $user, DataAnalitikPembelajaran $dataAnalitikPembelajaran): bool
     {
-        return $user->can('restore_data::analitik::pembelajaran');
+        return $user->can('{{ Restore }}');
     }
 
     /**
@@ -87,7 +87,7 @@ class DataAnalitikPembelajaranPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_data::analitik::pembelajaran');
+        return $user->can('{{ RestoreAny }}');
     }
 
     /**
@@ -95,7 +95,7 @@ class DataAnalitikPembelajaranPolicy
      */
     public function replicate(User $user, DataAnalitikPembelajaran $dataAnalitikPembelajaran): bool
     {
-        return $user->can('replicate_data::analitik::pembelajaran');
+        return $user->can('{{ Replicate }}');
     }
 
     /**
@@ -103,6 +103,6 @@ class DataAnalitikPembelajaranPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_data::analitik::pembelajaran');
+        return $user->can('{{ Reorder }}');
     }
 }

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ asset ('template/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{ asset ('template/css/icomoon.css')}}">
     <link rel="stylesheet" href="{{ asset ('template/css/style.css')}}">
+	
   </head>
   <body>
 	  <div class="py-2 bg-primary">

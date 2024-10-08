@@ -1,25 +1,25 @@
 @extends('layout.app')
  @section('content')
      <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url({{ asset ('template/images/bg_1.jpg')}});">
+      <div class="slider-item" style="background-image:url({{ asset ('template/images/2.jpg')}});">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 text-center ftco-animate">
-            <h1 class="mb-4">Kids Are The Best <span>Explorers In The World</span></h1>
-            <p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Read More</a></p>
+            <h1 class="mb-4"> Hi All <span>Explorers In The Indonesia</span></h1>
+            <p><a href="/about" class="btn btn-secondary px-4 py-3 mt-3">Read More</a></p>
           </div>
         </div>
         </div>
       </div>
 
-      <div class="slider-item" style="background-image:url({{ asset ('template/images/bg_2.jpg')}});">
+      <div class="slider-item" style="background-image:url({{ asset ('template/images/3.jpeg')}});">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 text-center ftco-animate">
             <h1 class="mb-4">Perfect Learned<span> For Your Child</span></h1>
-            <p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Read More</a></p>
+            <p><a href="/about" class="btn btn-secondary px-4 py-3 mt-3">Read More</a></p>
           </div>
         </div>
         </div>
@@ -181,7 +181,7 @@
 	        			<h3 class="mb-3">Seni Budaya Nusantara</h3>
 	        			{{-- <p><span class="price">$24.50</span> <span class="per">/ 5mos</span></p> --}}
 	        		</div>
-	        		<div class="img" style="background-image: url({{ asset ('template/images/bg_1.jpg')}});"></div>
+	        		<div class="img" style="background-image: url({{ asset ('template/images/6.jpeg')}});"></div>
 	        		<div class="px-4">
 	        			<p>Seni budaya Nusantara adalah kekayaan yang memancarkan keindahan, keragaman, dan kearifan lokal, mencerminkan jiwa bangsa serta warisan nenek moyang kita.</p>
         			</div>
@@ -194,7 +194,7 @@
 	        			<h3 class="mb-3">Kuliner Khas Nusantara</h3>
 	        			{{-- <p><span class="price">$34.50</span> <span class="per">/ 5mos</span></p> --}}
 	        		</div>
-	        		<div class="img" style="background-image: url({{ asset ('template/images/bg_2.jpg')}});"></div>
+	        		<div class="img" style="background-image: url({{ asset ('template/images/7.webp')}});"></div>
         			<div class="px-4">
 	        			<p>Kuliner khas Nusantara menyajikan cita rasa unik, menggugah selera, dan memadukan rempah-rempah, mencerminkan kekayaan budaya serta tradisi yang beragam di setiap daerah.</p>
         			</div>
@@ -207,7 +207,7 @@
 	        			<h3 class="mb-3">Tokoh Lokal Nusantara</h3>
 	        			{{-- <p><span class="price">$54.50</span> <span class="per">/ 5mos</span></p> --}}
 	        		</div>
-	        		<div class="img" style="background-image: url({{ asset ('template/images/bg_3.jpg')}});"></div>
+	        		<div class="img" style="background-image: url({{ asset ('template/images/8.jpg')}});"></div>
         			<div class="px-4">
 	        			<p>Tokoh lokal Nusantara menginspirasi masyarakat dengan perjuangan dan dedikasi, memperkuat identitas budaya serta menciptakan perubahan positif bagi komunitas dan bangsa.</p>
         			</div>
@@ -220,7 +220,7 @@
 	        			<h3 class="mb-3">Busana Tradisional Nusantara</h3>
 	        			{{-- <p><span class="price">$89.50</span> <span class="per">/ 5mos</span></p> --}}
 	        		</div>
-	        		<div class="img" style="background-image: url({{ asset ('template/images/bg_5.jpg')}});"></div>
+	        		<div class="img" style="background-image: url({{ asset ('template/images/9.webp')}});"></div>
         			<div class="px-4">
 	        			<p>Busana tradisional Nusantara memancarkan keindahan dan keberagaman, mencerminkan identitas budaya setiap daerah, serta melestarikan warisan nenek moyang yang penuh makna.</p>
         			</div>

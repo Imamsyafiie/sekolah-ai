@@ -6,6 +6,7 @@ use App\Filament\Resources\BlogResource\Pages;
 use App\Filament\Resources\BlogResource\RelationManagers;
 use App\Models\Blog;
 use Filament\Forms;
+use \NaturalGroove\Filament\ImageGeneratorField\Forms\Components\ImageGenerator;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -33,9 +34,12 @@ class BlogResource extends Resource
                 // Forms\Components\TextInput::make('title')
                 //     ->required()
                 //     ->maxLength(255),
-                Forms\Components\FileUpload::make('image')
-                    ->directory('blog')
-                    ->image(),
+                // Forms\Components\FileUpload::make('image')
+                //     ->directory('blog')
+                //     ->image(),
+                ImageGenerator::make('image')
+                    ->imageEditor()
+                    ->directory('blog'),
                 Forms\Components\DatePicker::make('publish_date')
                     ->required(),
             ]);

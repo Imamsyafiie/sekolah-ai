@@ -1,6 +1,6 @@
 @extends('layout.app')
  @section('content')
-     <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset ('template/images/bg_2.jpg')}}');">
+     <section class="hero-wrap hero-wrap-2" style="background-image: url('{{ asset ('template/images/4.jpeg')}}');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -16,7 +16,7 @@
 <section class="container my-5">
     <div class="row justify-content-center mb-5">
         <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4"><span>Pesona </span> Nusantara</h2>
+            <h2 class="mb-4"><span>Tema </span> Nusantara</h2>
             <p>SPesona Nusantara memikat hati, menggugah rasa ingin tahu setiap pengunjung. Dengan keindahan alam yang melimpah dan budaya yang kaya, Nusantara adalah tempat di mana tradisi dan modernitas berpadu harmonis.</p>
         </div>
     </div>
@@ -95,11 +95,11 @@
         </div>
     	</div>
     </section>
-	<section class="container my-5">
+	{{-- <section class="container my-5">
     <div class="row justify-content-center mb-5">
         <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4"><span>Pesona </span> Nusantara</h2>
-            <p>SPesona Nusantara memikat hati, menggugah rasa ingin tahu setiap pengunjung. Dengan keindahan alam yang melimpah dan budaya yang kaya, Nusantara adalah tempat di mana tradisi dan modernitas berpadu harmonis.</p>
+            <h2 class="mb-4"><span>Kearifan </span> Nusantara</h2>
+            <p>Pesona Nusantara memikat hati, menggugah rasa ingin tahu setiap pengunjung. Dengan keindahan alam yang melimpah dan budaya yang kaya, Nusantara adalah tempat di mana tradisi dan modernitas berpadu harmonis.</p>
         </div>
     </div>
 <div class="row justify-content-center">
@@ -122,7 +122,7 @@
         </div>
     @endforeach
 </div>
-</section>
+</section> --}}
 
 
 

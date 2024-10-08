@@ -95,7 +95,8 @@ class NilaiResource extends Resource
                         'undo',
                     ])
                     ->label('Deskripsi')
-                    ->required(),
+                    ->required()
+                    ->columnSpanFull(),
             ]);
     }
 

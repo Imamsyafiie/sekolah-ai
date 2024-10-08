@@ -6,6 +6,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\JurnalController;
+use App\Http\Controllers\KearifanController;
 use App\Http\Controllers\KulinerController;
 use Illuminate\Support\Facades\Http;
 use OpenAI\Laravel\Facades\OpenAI;
@@ -18,6 +19,8 @@ Route::get('/kategori/{category}', [KulinerController::class, 'category'])->name
 Route::get('/jurnal', [JurnalController::class, 'index'])->name('jurnals.index');
 // Route::get('/', [GuruController::class, 'index'])->name('home');
 Route::get('/', [GuruController::class, 'index'])->name('home');
+Route::get('/kearifan', [KearifanController::class, 'index'])->name('kearifan.index');
+
 
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('blogs.show');
